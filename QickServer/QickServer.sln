@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QickServer.Domain", "QickServer.Domain\QickServer.Domain.csproj", "{FDA86A97-AC94-4753-8C2B-4F436D580F12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QickServer.Application", "QickServer.Application\QickServer.Application.csproj", "{DFAD5389-50AF-4AFE-B4F6-5C929CC720EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QickServer.Infrastructure", "QickServer.Infrastructure\QickServer.Infrastructure.csproj", "{CD617DB5-8899-4FA1-BD8C-B3CE63D22149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QickServer.WebAPI", "QickServer.WebAPI\QickServer.WebAPI.csproj", "{B63C1352-EE95-4331-975C-DAC4E2761FAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDA86A97-AC94-4753-8C2B-4F436D580F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA86A97-AC94-4753-8C2B-4F436D580F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA86A97-AC94-4753-8C2B-4F436D580F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA86A97-AC94-4753-8C2B-4F436D580F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFAD5389-50AF-4AFE-B4F6-5C929CC720EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFAD5389-50AF-4AFE-B4F6-5C929CC720EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFAD5389-50AF-4AFE-B4F6-5C929CC720EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFAD5389-50AF-4AFE-B4F6-5C929CC720EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD617DB5-8899-4FA1-BD8C-B3CE63D22149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD617DB5-8899-4FA1-BD8C-B3CE63D22149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD617DB5-8899-4FA1-BD8C-B3CE63D22149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD617DB5-8899-4FA1-BD8C-B3CE63D22149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63C1352-EE95-4331-975C-DAC4E2761FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63C1352-EE95-4331-975C-DAC4E2761FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63C1352-EE95-4331-975C-DAC4E2761FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63C1352-EE95-4331-975C-DAC4E2761FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67C5432B-FF1E-43A9-8F59-FAD9908E8F0F}
+	EndGlobalSection
+EndGlobal
