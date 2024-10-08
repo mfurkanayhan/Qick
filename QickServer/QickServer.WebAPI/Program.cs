@@ -1,10 +1,15 @@
 using QickServer.Application;
 using QickServer.Infrastructure;
+using QickServer.WebAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
+
+builder.Services.AddExceptionHandler<MyExceptionHandler>().AddProblemDetails();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -18,10 +23,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//app.MapPost("register", async (IMediator mediator, HttpContext httpContext, RegisterCommand request, CancellationToken cancellationToken) =>
+//{
+//    var response = await mediator.Send(request, cancellationToken);
+//    httpContext.Response.StatusCode = response.StatusCode;
+//    return response;
+//});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseExceptionHandler();
 
 app.Run();

@@ -1,3 +1,46 @@
 @QickServer.WebAPI_HostAddress = http://localhost:5153
 
+
+# POST https://localhost:7276/api/Auth/Register
+# Content-Type: application/json
+
+# {
+#   "userName": "yu",
+#   "password": "1"
+# }
+# ###
+
+POST https://localhost:7276/api/QickParticipants/Join
+Content-Type: application/json
+
+{
+  "roomNumber": 615852,
+  "userName": "furkan",
+  "email": "furkanayhan@gmail.com"
+}
 ###
+
+POST https://localhost:7276/api/Auth/Login
+Content-Type: application/json
+
+{
+  "userName": "furkan",
+  "password": "1"
+}
+###
+
+POST https://localhost:7276/api/Qicks/Create
+Content-Type: application/json
+
+{
+  "title": "Test2"
+}
+###
+
+POST https://localhost:7276/api/Qicks/GetAll
+Content-Type: application/json
+
+{
+}
+###
+
