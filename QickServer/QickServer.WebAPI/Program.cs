@@ -3,6 +3,7 @@ using QickServer.Infrastructure;
 using QickServer.WebAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -31,6 +32,8 @@ if (app.Environment.IsDevelopment())
 //});
 
 app.UseHttpsRedirection();
+
+app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
 app.UseAuthorization();
 

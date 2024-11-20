@@ -17,7 +17,11 @@ internal sealed class JoinQickCommandHandler(
             return Result<string>.Failure("Qick not found");
         }
 
-        //signalR oluştur, signalR'da buraya giriş yapanları kayıt altına alıyorsunuz. Ama kayıt altına alıtken qick numarasına dikkat ederek alıyorsunuz. Yani a numaralı qick(oda)'te a kişi var. B numaralı qick'te b kişi var gibi. Buradan geriye sadece ilgili qick'in kullanıcı listesini döndürüyorsunuz
+        Participant participant = new(request.UserName, request.Email);
+        Participants participants = new(request.RoomNumber, participant);
+        Shared.Participants.Add(participants);
+
+        //Create a SignalR system that tracks users joining specific rooms. While recording the users, ensure that they are associated with the correct Qick number (room). For example, Qick A (room A) should only track users in room A, and Qick B (room B) should only track users in room B. The system should return only the user list for the specified Qick (room).
 
         return "Join is successful";
     }
