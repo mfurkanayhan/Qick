@@ -12,7 +12,7 @@ export const routes: Routes = [
     component: UIHomeComponent
   },
   {
-    path: "qick/:roomNumber",
+    path: "qick/:roomNumber/:email",
     component: UIQickComponent
   },
   {

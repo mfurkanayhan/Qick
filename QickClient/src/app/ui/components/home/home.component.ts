@@ -21,7 +21,7 @@ export default class HomeComponent {
 
   join(){
     this.http.post("QickParticipants/Join", this.model(),(res)=> {
-      this.router.navigateByUrl(`/qick${this.model().roomNumber}`)
+      this.router.navigateByUrl(`/qick/${this.model().roomNumber}/${this.model().email}`);
     })
   }
 }

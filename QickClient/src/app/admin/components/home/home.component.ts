@@ -3,12 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { FlexiGridModule } from 'flexi-grid'; 
 import { QickModel } from '../../models/qick.model';
 import { HttpService } from '../../../common/services/http.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { FlexiToastService } from 'flexi-toast';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FlexiGridModule, FormsModule, RouterLink],
+  imports: [FlexiGridModule, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -17,8 +18,16 @@ export default class HomeComponent {
   addModel = signal<QickModel>(new QickModel());
   updateModel = signal<QickModel>(new QickModel());
 
-  constructor(private http: HttpService){
+  constructor(
+    private http: HttpService,
+    private router: Router,
+    private toast: FlexiToastService
+  ){
     this.getAll();
+  }
+
+  gotoRoom(roomNumber: number){
+    this.router.navigateByUrl(`/admin/room/${roomNumber}`)
   }
 
   getAll(){
@@ -29,6 +38,7 @@ export default class HomeComponent {
     this.http.post<string>("Qicks/Create", this.addModel(), (res)=> {
       this.addModel.set(new QickModel());
       this.getAll();
+      this.toast.showToast("Success", "Qick create is successful", "success");
     });
   }
 }

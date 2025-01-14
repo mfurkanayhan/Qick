@@ -1,16 +1,23 @@
-<div>
-  <label for="">Room Number</label>
-  <input [(ngModel)]="model().roomNumber" type="text">
-</div>
-<div>
-  <label for="">UserName</label>
-  <input [(ngModel)]="model().userName" type="text">
-</div>
-<div>
-  <label for="">Email</label>
-  <input [(ngModel)]="model().email" type="email">
-</div>
-
-<div>
-  <button (click)="join()">Join</button>
+<div class="participant-home-container">
+  <div class="participant-home-content">
+    
+    <div class="div-group">
+      <label for="">Qick Number</label>
+      <input [(ngModel)]="model().roomNumber" type="text">
+    </div>
+    
+    <div class="div-group">
+      <label for="">UserName</label>
+      <input [(ngModel)]="model().userName" type="text">
+    </div>
+    
+    <div class="div-group">
+      <label for="">Email</label>
+      <input [(ngModel)]="model().email" type="email">
+    </div>
+    
+    <div class="div-group">
+      <button class="w-100" (click)="join()">Join</button>
+    </div>
+  </div>
 </div>
