@@ -11,6 +11,20 @@ public class CreateRoomHub : Hub
         QickParticipants.Add(new(Context.ConnectionId, roomNumber, email));
     }
 
+    public async Task LeaveQickRoomByParticipant(string roomNumber, string email)
+    {
+        QickParticipants.RemoveWhere(p => p.RoomNumber == roomNumber && p.Email == email);
+
+        await Clients.Group(roomNumber).SendAsync("LeaveQickRoom", email);
+
+        var participant = Shared.Participants.Where(p => p.Participant.Email == email && p.RoomNumber.ToString() == roomNumber).FirstOrDefault();
+
+        if (participant is not null)
+        {
+            Shared.Participants.Remove(participant);
+        }
+    }
+
     public async override Task OnDisconnectedAsync(Exception? exception)
     {
         List<QickParticipant> participants = QickParticipants.Where(p => p.ConnectionId == Context.ConnectionId).ToList();

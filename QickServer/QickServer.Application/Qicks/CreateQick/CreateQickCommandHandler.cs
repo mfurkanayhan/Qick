@@ -9,7 +9,7 @@ internal sealed class CreateQickCommandHandler(
 {
     public async Task<Result<string>> Handle(CreateQickCommand request, CancellationToken cancellationToken)
     {
-        Title title = new(request.Title);
+        Title title = Title.Create(request.Title);
         int roomNumberInt = new Random().Next(000000, 999999);
         RoomNumber roomNumber = new(roomNumberInt);
 

@@ -5,12 +5,14 @@ using QickServer.Domain.Qicks;
 namespace QickServer.Application.Qicks.GetAllQick;
 
 internal sealed class GetAllQickQueryHandler(
-    IQickRepository qickRepository) : IRequestHandler<GetAllQickQuery, Result<List<Qick>>>
+    IQickRepository qickRepository) : IRequestHandler<GetAllQickQuery, Result<List<GetAllQickQueryResponse>>>
 {
-    public async Task<Result<List<Qick>>> Handle(GetAllQickQuery request, CancellationToken cancellationToken)
+    public async Task<Result<List<GetAllQickQueryResponse>>> Handle(GetAllQickQuery request, CancellationToken cancellationToken)
     {
         var result = await qickRepository.GetAllAsync(cancellationToken);
 
-        return result;
+        var response = result.Select(s => new GetAllQickQueryResponse(s.Id.Value, s.Title.Value, s.RoomNumber.Value)).ToList();
+
+        return response;
     }
 }

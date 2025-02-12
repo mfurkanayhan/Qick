@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QickServer.Domain.QickDetails;
 using QickServer.Domain.Qicks;
 using QickServer.Domain.Users;
 
@@ -11,6 +12,7 @@ internal sealed class ApplicationDbContext : DbContext
 
     public DbSet<User> Users { get; set; }
     public DbSet<Qick> Qicks { get; set; }
+    public DbSet<QickDetail> QickDetails { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

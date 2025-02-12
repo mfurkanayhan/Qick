@@ -1,5 +1,12 @@
 <div class="div-group">
-  <flexi-grid
+  <!-- Add Card -->
+  <div class="card">
+    <h1>Deneme</h1>
+    <h3>800385</h3>
+    <button>Goto Room</button>
+  </div>
+  
+  <!-- <flexi-grid
   [data]="qicks()"
   [showCaption]="true"
   captionTitle="Qick List"
@@ -15,16 +22,16 @@
       <button (click)="create()">Save</button>
     </div>
   </ng-template>
-  <flexi-grid-column field="id.value" title="Id"></flexi-grid-column>
-  <flexi-grid-column field="title.value" title="Title"></flexi-grid-column>
-  <flexi-grid-column field="roomNumber.value" title="Room Number"></flexi-grid-column>
-  <flexi-grid-column title="Options">
-  <!-- <flexi-grid-column title="Options" [columnTemplate]="optionsColumnTemplate"> -->
+  <flexi-grid-column field="id" title="Id"></flexi-grid-column>
+  <flexi-grid-column field="title" title="Title"></flexi-grid-column>
+  <flexi-grid-column field="roomNumber" title="Room Number"></flexi-grid-column>
+  <flexi-grid-column title="Operations"
+  [columnTemplate]="optionsColumnTemplate">
   </flexi-grid-column>
 
-  <ng-template #optionsColumnTemplate let-item="item">
+  <ng-template #operationsColumnTemplate let-item="item">
     <button (click)="gotoRoom(item.roomNumber.value)">Go to room</button>
   </ng-template>
 
-  </flexi-grid>
+  </flexi-grid> -->
 </div>

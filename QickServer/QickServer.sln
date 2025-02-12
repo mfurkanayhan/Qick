@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QickServer.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QickServer.WebAPI", "QickServer.WebAPI\QickServer.WebAPI.csproj", "{B63C1352-EE95-4331-975C-DAC4E2761FAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QickServer.ConsoleApp", "ConsoleApp\QickServer.ConsoleApp.csproj", "{60D8826D-F90D-4ADA-ACA0-6C5C04737AB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QickServer.HealthCheck.WebAPI", "QickServer.HealthCheck.WebAPI\QickServer.HealthCheck.WebAPI.csproj", "{68A7D3EB-D6A1-4437-8D30-242B4BBBFAA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B63C1352-EE95-4331-975C-DAC4E2761FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B63C1352-EE95-4331-975C-DAC4E2761FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B63C1352-EE95-4331-975C-DAC4E2761FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60D8826D-F90D-4ADA-ACA0-6C5C04737AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D8826D-F90D-4ADA-ACA0-6C5C04737AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D8826D-F90D-4ADA-ACA0-6C5C04737AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D8826D-F90D-4ADA-ACA0-6C5C04737AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A7D3EB-D6A1-4437-8D30-242B4BBBFAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A7D3EB-D6A1-4437-8D30-242B4BBBFAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A7D3EB-D6A1-4437-8D30-242B4BBBFAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A7D3EB-D6A1-4437-8D30-242B4BBBFAA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
